@@ -26,7 +26,7 @@ list.insert(len(a),x)
 
 list.remove(x)
 i = list.index(x)
-list = list[:i]+list[i+1]
+list = list[:i]+list[i+1:]
 
 list.clear()
 list = []
@@ -74,15 +74,16 @@ print(l1) # [0, 0, 0, 0]
 
 # arguments are also passed by assignment
 def f(var):
-    # var = var[:]
-    # can be modified in-place
+    # indexing can modify value of var in-place
     var[1] = 100
     var.append(100)
-    # assignment does not work
+    # list assignment changes reference of var
     var = [1,2,3,4]
+    return var
 
-f(l1)
+l6 = f(l1)
 print(l1) # [0, 100, 0, 0, 100]
+print(l6) # [1, 2, 3, 4]
 ```
 
 
@@ -234,9 +235,9 @@ def foo() :
 for c in 'qwertyuiop' :
     if c in 'qr' :
         continue # 바로 다음 iteration 진행
-	if c == 'y' :
-        break # 가장 안쪽의 loop를 종료
-    print(c, end='')
+    if c == 'y' :
+        break # 가장 안쪽 loop 종료
+    print(c,end='')
 print()
 ```
 
@@ -303,9 +304,9 @@ print('{2} {1} {0}'.format(10,20,30)) # 순서 바꾸기
 print('{1} {1} {1}'.format(10,20,30)) # 변수 재사용
 
 print('{:10d}'.format(42),end='_') 	#        42_
-print('{:>10d}'.format(42),end='_')     #        42_
-print('{:^10d}'.format(42),end='_')     #    42    _
-print('{:<10d}'.format(42),end='_')     #42        _
+print('{:>10d}'.format(42),end='_') #        42_
+print('{:^10d}'.format(42),end='_') #    42    _
+print('{:<10d}'.format(42),end='_') #42        _
 print('{:10.10f}'.format(333.333))	#333.3330000000
 print('{:2.2f}'.format(333.333))	#333.33
 ```
