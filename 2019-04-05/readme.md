@@ -178,7 +178,7 @@ list와 tuple이 번갈아 사용될경우 mutability를 검사하는 것이 매
 
 ## Techniques for loop statements
 
-#### for vs. while
+### for vs. while
 
 for : 정해진 sequence나 횟수 동안 loop 해야 하는 경우
 
@@ -202,7 +202,7 @@ print(l)
 
 
 
-#### Nested loops
+Nested loops
 
 useful for indexing multi-dimensional data
 
@@ -226,7 +226,7 @@ print(l)
 
 
 
-#### break, continue, pass
+### break, continue, pass
 
 ```python
 def foo() :
