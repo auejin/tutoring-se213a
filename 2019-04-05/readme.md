@@ -307,8 +307,8 @@ print('{:10d}'.format(42),end='_')  #        42_
 print('{:>10d}'.format(42),end='_') #        42_
 print('{:^10d}'.format(42),end='_') #    42    _
 print('{:<10d}'.format(42),end='_') #42        _
-print('{:10.10f}'.format(333.333))	#333.3330000000
-print('{:2.2f}'.format(333.333))	#333.33
+print('{:10.10f}'.format(333.333))  #333.3330000000
+print('{:2.2f}'.format(333.333))    #333.33
 ```
 
 
