@@ -303,7 +303,7 @@ print('{} {} {}'.format(10,20,30))
 print('{2} {1} {0}'.format(10,20,30)) # 순서 바꾸기
 print('{1} {1} {1}'.format(10,20,30)) # 변수 재사용
 
-print('{:10d}'.format(42),end='_') 	#        42_
+print('{:10d}'.format(42),end='_')  #        42_
 print('{:>10d}'.format(42),end='_') #        42_
 print('{:^10d}'.format(42),end='_') #    42    _
 print('{:<10d}'.format(42),end='_') #42        _
